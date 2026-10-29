@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velocity — The Free 32-Thread Download Manager Built to Destroy IDM</title>
+  <meta name="description" content="Velocity is a free, open-source multi-threaded download manager that bypasses browser throttling with up to 32 parallel connections, native 4K/8K video extraction, and bundled FFmpeg audio merge.">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/MagicalMadhur/Velocity-Download-Manager-Anti-Browser-Throttle@main/download_manager/velocity.ico">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand">
+        <img src="https://cdn.jsdelivr.net/gh/MagicalMadhur/Velocity-Download-Manager-Anti-Browser-Throttle@main/edge_store_logo_300x300.png" alt="Velocity Logo" class="brand-logo">
+        <span class="brand-text">Velocity</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#benchmark">Benchmark</a>
+        <a href="#compare">Velocity vs IDM</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#download" class="nav-download-btn">Download v1.0.3</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="hero-container">
+        <div class="release-pill">
+          <span class="pill-dot"></span>
+          <span class="pill-text">Latest Release v1.0.3 • 100% Free & Open Source</span>
+          <span class="pill-arrow">→</span>
+        </div>
+
+        <h1 class="hero-title">
+          Bypass Browser Throttling.<br>
+          <span class="gradient-text">Download at Terminal Velocity.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Browsers artificially restrict downloads to a single slow connection. 
+          <strong>Velocity</strong> unleashes up to <strong>32 parallel range threads</strong>, extracts hidden 4K/8K streams via <code>yt-dlp</code>, and merges high-res audio automatically using bundled <code>FFmpeg</code>.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://github.com/MagicalMadhur/Velocity-Download-Manager-Anti-Browser-Throttle/releases/download/v1.0.3/Velocity_Setup.exe" class="btn btn-primary">
+            <span class="btn-icon">⚡</span>
+            <div class="btn-text">
+              <span class="btn-main">Download for Windows</span>
+              <span class="btn-sub">Velocity_Setup.exe • v1.0.3 (64-bit)</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/MagicalMadhur/Velocity-Download-Manager-Anti-Browser-Throttle/releases/download/v1.0.3/Velocity_Extension.zip" class="btn btn-secondary">
+            <span class="btn-icon">🧩</span>
+            <div class="btn-text">
+              <span class="btn-main">Browser Extension</span>
+              <span class="btn-sub">Chrome, Edge & Brave</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/MagicalMadhur/Velocity-Download-Manager-Anti-Browser-Throttle" target="_blank" class="btn btn-github">
+            <span class="btn-icon">⭐️</span>
+            <div class="btn-text">
+              <span class="btn-main">Star on GitHub</span>
+              <span class="btn-sub">Open Source (MIT)</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Live Simulated Speed Visualizer -->
+        <div class="benchmark-card" id="benchmark">
+          <div class="benchmark-header">
+            <div class="bench-badge">LIVE SPEED BENCHMARK</div>
+            <div class="bench-title">3GB ISO File Download Acceleration</div>
+          </div>
+
+          <div class="bench-streams">
+            <!-- Browser throttled single connection -->
+            <div class="stream-item">
+              <div class="stream-info">
+                <span class="stream-name">❌ Standard Browser (Chrome / Edge / Firefox)</span>
+                <span class="stream-stat" id="browser-speed">1 Stream • 2.4 MB/s (Throttled)</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar bar-browser" id="browser-bar"></div>
+              </div>
+            </div>
+
+            <!-- Velocity multi-connection -->
+            <div class="stream-item">
+              <div class="stream-info">
+                <span class="stream-name">⚡ Velocity Download Manager</span>
+                <span class="stream-stat highlight" id="velocity-speed">32 Parallel Threads • 16.8 MB/s (Saturated)</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-bar bar-velocity" id="velocity-bar"></div>
+              </div>
+            </div>
+          </div>
+          <div class="benchmark-footer">
+            <span>Result: Velocity delivers <strong>3x to 5x faster downloads</strong> by saturating available network bandwidth.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Grid -->
+    <section class="section" id="features">
+      <div class="section-container">
+        <div class="section-tag">ENGINEERED FOR RAW SPEED</div>
+        <h2 class="section-title">Everything IDM does. Plus everything browsers withhold.</h2>
+        <p class="section-subtitle">No subscriptions, no serial keys, and no artificial limitations.</p>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3>32-Thread Parallel Acceleration</h3>
+            <p>Splits every file into concurrent byte-range requests. Assembles segments directly on disk with preallocated seek offsets to completely bypass single-socket throttling.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🎬</div>
+            <h3>4K, 1440p & 8K Video Extraction</h3>
+            <p>Browsers only give you 720p streams. Velocity uses embedded <code>yt-dlp</code> to capture hidden master-quality video files from YouTube, Vimeo, and video platforms worldwide.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🔊</div>
+            <h3>Bundled FFmpeg & Loudness Norm</h3>
+            <p>High-res video and audio streams are merged seamlessly on the fly. Applies FFmpeg <code>loudnorm</code> calibration to eliminate jarring volume spikes.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🎛️</div>
+            <h3>Token-Bucket Rate Limiting</h3>
+            <p>A true global rate limiter governs all active threads across all downloads. Cap your bandwidth consumption precisely so gaming and streaming stay buffer-free.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📁</div>
+            <h3>Smart File Auto-Categorization</h3>
+            <p>Automatically organizes downloads into Videos, Music, Documents, Images, Compressed Archives, and Software based on file extensions.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🧩</div>
+            <h3>Seamless Browser Interception</h3>
+            <p>Lightweight extension communicates with Velocity on local port <code>127.0.0.1:6800</code> to catch download clicks and inject overlay buttons directly onto video players.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Velocity vs Competitors Matrix -->
+    <section class="section section-dark" id="compare">
+      <div class="section-container">
+        <div class="section-tag">THE COMPARISON</div>
+        <h2 class="section-title">Why switch from IDM or standard browsers?</h2>
+
+        <div class="table-wrapper">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th class="col-highlight">⚡ Velocity</th>
+                <th>Standard Browser</th>
+                <th>Internet Download Manager (IDM)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Price & Licensing</td>
+                <td class="col-highlight"><strong>100% Free & Open Source (MIT)</strong></td>
+                <td>Free (Built-in)</td>
+                <td>$24.95 / year (Paid License)</td>
+              </tr>
+              <tr>
+                <td>Max Parallel Streams</td>
+                <td class="col-highlight"><strong>Up to 32 Threads</strong></td>
+                <td>1 Thread (Throttled)</td>
+                <td>8 – 16 Threads</td>
+              </tr>
+              <tr>
+                <td>Video Resolution Capture</td>
+                <td class="col-highlight"><strong>Up to 8K (yt-dlp engine)</strong></td>
+                <td>Max 720p (Browser stream)</td>
+                <td>1080p (Requires manual codecs)</td>
+              </tr>
+              <tr>
+                <td>Audio-Video Auto Merge</td>
+                <td class="col-highlight"><strong>Bundled FFmpeg + Loudness Filter</strong></td>
+                <td>None</td>
+                <td>Requires external tools</td>
+              </tr>
+              <tr>
+                <td>Rate Limiting Algorithm</td>
+                <td class="col-highlight"><strong>True Global Token-Bucket</strong></td>
+                <td>None</td>
+                <td>Per-download approximation</td>
+              </tr>
+              <tr>
+                <td>System Tray & Auto-Shutdown</td>
+                <td class="col-highlight"><strong>Yes (Windows Native)</strong></td>
+                <td>No</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Telemetry & Ads</td>
+                <td class="col-highlight"><strong>Zero Telemetry • Zero Ads</strong></td>
+                <td>Telemetry Enabled</td>
+                <td>Periodic upgrade popups</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- App Screenshots -->
+    <section class="section" id="screenshots">
+      <div class="section-container">
+        <div class="section-tag">NATIVE WINDOWS EXPERIENCE</div>
+        <h2 class="section-title">Clean, Dark-Themed & Distraction Free</h2>
+        <p class="section-subtitle">Crafted with modern CustomTkinter, real-time speed graphs, and system tray minimization.</p>
+
+        <div class="screenshots-grid">
+          <div class="screenshot-box">
+            <img src="https://cdn.jsdelivr.net/gh/MagicalMadhur/Velocity-Download-Manager-Anti-Browser-Throttle@main/edge_screenshot_1.png" alt="Velocity Main Download Queue" class="screen-img">
+            <div class="screen-caption">Main Download Queue — Real-time thread progress, speed graph & category filters</div>
+          </div>
+          <div class="screenshot-box">
+            <img src="https://cdn.jsdelivr.net/gh/MagicalMadhur/Velocity-Download-Manager-Anti-Browser-Throttle@main/edge_screenshot_2.png" alt="Velocity Browser Extension Popup" class="screen-img">
+            <div class="screen-caption">Native Browser Integration — Seamless video capture overlay on Edge, Brave & Chrome</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Downloads Call to Action -->
+    <section class="section section-cta" id="download">
+      <div class="section-container">
+        <div class="cta-box">
+          <div class="cta-badge">GET STARTED IN SECONDS</div>
+          <h2 class="cta-title">Ready to unlock your true internet speed?</h2>
+          <p class="cta-subtitle">Download Velocity today. Pre-bundled with FFmpeg, setup wizard, and browser extension.</p>
+
+          <div class="download-cards">
+            <div class="dl-card">
+              <div class="dl-icon">🖥️</div>
+              <div class="dl-name">Velocity for Windows</div>
+              <div class="dl-version">Version 1.0.3 • 64-bit Installer</div>
+              <div class="dl-desc">Includes standalone installer, desktop shortcut creation, bundled FFmpeg runtime, and system chime alerts.</div>
+              <a href="https://github.com/MagicalMadhur/Velocity-Download-Manager-Anti-Browser-Throttle/releases/download/v1.0.3/Velocity_Setup.exe" class="btn btn-primary dl-btn">
+                <span>⬇️</span> Download Velocity_Setup.exe
+              </a>
+            </div>
+
+            <div class="dl-card">
+              <div class="dl-icon">🧩</div>
+              <div class="dl-name">Browser Extension Package</div>
+              <div class="dl-version">Version 1.3 • Chromium Extension</div>
+              <div class="dl-desc">Lightweight packed extension for Google Chrome, Microsoft Edge, and Brave. Automatic download detection.</div>
+              <a href="https://github.com/MagicalMadhur/Velocity-Download-Manager-Anti-Browser-Throttle/releases/download/v1.0.3/Velocity_Extension.zip" class="btn btn-secondary dl-btn">
+                <span>⬇️</span> Download Extension (.zip)
+              </a>
+            </div>
+          </div>
+
+          <div class="cta-install-note">
+            <span>💡 Running from source? Run <code>git clone https://github.com/MagicalMadhur/Velocity-Download-Manager-Anti-Browser-Throttle.git</code> and <code>pip install -r requirements.txt</code></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="brand">
+          <img src="https://cdn.jsdelivr.net/gh/MagicalMadhur/Velocity-Download-Manager-Anti-Browser-Throttle@main/edge_store_logo_300x300.png" alt="Velocity" class="brand-logo sm">
+          <span class="brand-text">Velocity</span>
+        </div>
+        <p class="footer-quote"><em>"Built with love, to destroy IDM."</em></p>
+        <p class="footer-copy">Crafted by <a href="https://github.com/MagicalMadhur" target="_blank">Madhur Chavan (@MagicalMadhur)</a>. Licensed under the MIT License.</p>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-links-col">
+          <h4>Project</h4>
+          <a href="https://github.com/MagicalMadhur/Velocity-Download-Manager-Anti-Browser-Throttle" target="_blank">GitHub Repository</a>
+          <a href="https://github.com/MagicalMadhur/Velocity-Download-Manager-Anti-Browser-Throttle/releases" target="_blank">Releases & Changelog</a>
+          <a href="https://github.com/MagicalMadhur/Velocity-Download-Manager-Anti-Browser-Throttle/issues" target="_blank">Issue Tracker</a>
+        </div>
+        <div class="footer-links-col">
+          <h4>Hosting & Infrastructure</h4>
+          <span class="footer-tag">⚡ Powered by ZeroHost</span>
+          <span class="footer-tag">🌍 GitHub Pages + jsDelivr CDN</span>
+          <span class="footer-tag">💰 $0.00 / month Global Hosting</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
