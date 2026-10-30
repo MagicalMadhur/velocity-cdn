@@ -61,7 +61,7 @@ function initBenchmarkSimulation() {
 // Fetch live GitHub Stars
 async function fetchGitHubStats() {
   try {
-    const res = await fetch('https://api.github.com/repos/MagicalMadhur/Velocity-Download-Manager-Anti-Browser-Throttle');
+    const res = await fetch('https://api.github.com/repos/MagicalMadhur/velocity-cdn');
     if (!res.ok) return;
     const data = await res.json();
     if (data.stargazers_count !== undefined) {
